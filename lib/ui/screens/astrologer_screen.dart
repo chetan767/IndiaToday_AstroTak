@@ -44,12 +44,9 @@ class AstrologerScreen extends StatelessWidget {
                 children: [
                   InkWell(
                     onTap: () {
-                      print("start");
-
                       context
                           .read<AstrologerBloc>()
                           .add(AstologerShowSearch(show: true));
-                      print("done");
                     },
                     child: Image.asset(
                       "assets/search.png",
@@ -116,8 +113,6 @@ class AstrologerScreen extends StatelessWidget {
                     ),
                     suffixIcon: InkWell(
                       onTap: () {
-                        print("xyz");
-
                         context
                             .read<AstrologerBloc>()
                             .add(AstologerShowSearch(show: false));
