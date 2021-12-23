@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:india_today/logic/bloc/panchang/panchang_bloc.dart';
 import 'package:india_today/my_flutter_app_icons.dart';
+import 'package:india_today/ui/widgets/custom_data.dart';
+import 'package:india_today/ui/widgets/custom_time.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:sizer/sizer.dart';
 import 'package:india_today/logic/bloc/location_state.dart';
@@ -542,82 +544,6 @@ class PanchangScreen extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class CustomData extends StatelessWidget {
-  final String datakey;
-  final String datavalue;
-
-  CustomData({required this.datakey, required this.datavalue});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: 35.0.w,
-          child: Text(
-            datakey + ":",
-            style: TextStyle(fontSize: 11.0.sp, color: Colors.black54),
-          ),
-        ),
-        SizedBox(
-          width: 4.0.w,
-        ),
-        Container(
-          width: 52.0.w,
-          child: Text(
-            datavalue,
-            style: TextStyle(fontSize: 11.0.sp, color: Colors.black54),
-          ),
-        )
-      ],
-    );
-  }
-}
-
-class CustomTime extends StatelessWidget {
-  final IconData iconData;
-  final title;
-  final time;
-  CustomTime({required this.iconData, required this.title, required this.time});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 2.0.w),
-      child: IntrinsicHeight(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(
-              iconData,
-              size: 8.0.w,
-              color: Color.fromRGBO(92, 111, 192, 1),
-            ),
-            SizedBox(
-              width: 2.0.w,
-            ),
-            Column(
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                      color: Color.fromRGBO(92, 111, 192, 1),
-                      fontSize: 10.0.sp),
-                ),
-                Text(
-                  time,
-                  style: TextStyle(fontSize: 10.0.sp),
-                )
-              ],
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

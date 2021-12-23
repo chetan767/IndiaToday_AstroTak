@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:india_today/const.dart';
+import 'package:india_today/constants.dart';
 import 'package:india_today/logic/bloc/bottombar/bottombar_bloc.dart';
 import 'package:india_today/ui/screens/astrologer_screen.dart';
 import 'package:india_today/ui/screens/panchang_screen.dart';
