@@ -139,6 +139,10 @@ class AstrologerScreen extends StatelessWidget {
           child: Builder(builder: (context) {
             List<Data> list =
                 context.watch<AstrologerBloc>().state.filteredData;
+
+            if (list.isEmpty) {
+              return Center(child: CircularProgressIndicator());
+            }
             return ListView.builder(
                 itemCount: list.length,
                 itemBuilder: (context, index) {

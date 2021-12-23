@@ -18,12 +18,18 @@ class AstrologerBloc extends Bloc<AstrologerEvent, AstrolgerState> {
     AstrologerEvent event,
   ) async* {
     if (event is AstrologerGetData) {
-      AstrolgerState astrolgerState = await respository.getData();
-      print(astrolgerState.message);
       print("www");
+      print("start api");
+
+      AstrolgerState astrolgerState = await respository.getData();
+      print("done api");
+
+      print(astrolgerState.message);
       String languages = "";
       yield (state.copyWith(
           data: astrolgerState.data, filteredData: astrolgerState.data));
+
+      print("done state");
     } else if (event is AstrologerFilterList) {
       if (event.text == "") {
         yield (state.copyWith(filteredData: state.data));

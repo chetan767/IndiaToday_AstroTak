@@ -54,6 +54,8 @@ class IndiaToday extends StatefulWidget {
 class _IndiaTodayState extends State<IndiaToday> {
   @override
   void initState() {
+    print("www");
+
     context.read<AstrologerBloc>().add(AstrologerGetData());
     super.initState();
   }

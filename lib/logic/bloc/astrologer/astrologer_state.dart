@@ -60,19 +60,20 @@ class AstrolgerState {
   }
 
   Map<String, dynamic> toMap() {
+    print("hhhh");
     return {
       'httpStatus': httpStatus,
       'httpStatusCode': httpStatusCode,
       'success': success,
       'message': message,
       'apiName': apiName,
-      // 'data': data.map((x) => x.toMap()).toList(),
+      'data': data.map((x) => x.toMap()).toList(),
       // 'filteredData': filteredData.map((x) => x.toMap()).toList(),
       // 'finalfilteredData': finalfilteredData.map((x) => x.toMap()).toList(),
       // 'skill_values': skill_values.map((x) => x.toMap()).toList(),
       // 'lang_values': lang_values.map((x) => x.toMap()).toList(),
       // 'sorting_value': sorting_value,
-      'showSearch': showSearch,
+      // 'showSearch': showSearch,
     };
   }
 
@@ -89,7 +90,7 @@ class AstrolgerState {
       // skill_values: List<Skill>.from(map['skill_values']?.map((x) => Skill.fromMap(x))),
       // lang_values: List<Language>.from(map['lang_values']?.map((x) => Language.fromMap(x))),
       // sorting_value: map['sorting_value'] ?? '',
-      showSearch: map['showSearch'] ?? false,
+      // showSearch: map['showSearch'] ?? false,
     );
   }
 

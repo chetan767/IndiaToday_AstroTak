@@ -1,0 +1,10 @@
+{
+	"configurations": [
+		
+	{
+		"name": "Flutter: Attach to Device",
+		"type": "dart",
+		"request": "attach"
+	}
+	]
+}

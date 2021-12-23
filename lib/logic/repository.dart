@@ -10,6 +10,12 @@ class AstrolgerRespository {
     http.Response response = await http
         .get(Uri.parse("https://www.astrotak.com/astroapi/api/agent/all"));
 
+    print("xyz");
+    print(response.body);
+    print("h");
+    print(AstrolgerState.fromJson(response.body));
+    print("h");
+
     return AstrolgerState.fromJson(response.body);
   }
 }
