@@ -1,4 +1,4 @@
-# India Today Assignment 
+# India Today  
 
 <img src="outputs/img1.jpg" width=300 >
 <img src="outputs/img2.jpg" width=300 >
